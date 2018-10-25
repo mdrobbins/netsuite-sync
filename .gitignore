@@ -1,1 +1,6 @@
-/node_modules
+#
+test/
+test/**/**
+NetSuiteConfig.js*
+.idea/
+node_modules

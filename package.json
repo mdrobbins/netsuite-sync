@@ -1,35 +1,7 @@
 {
-  "_from": "netsuite-sync",
-  "_id": "netsuite-sync@1.2.2",
-  "_inBundle": false,
-  "_integrity": "sha1-wyp39JD0l21c7ccg5AyDbIjuzYs=",
-  "_location": "/netsuite-sync",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "netsuite-sync",
-    "name": "netsuite-sync",
-    "escapedName": "netsuite-sync",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
-  },
-  "_requiredBy": [
-    "#USER"
-  ],
-  "_resolved": "https://registry.npmjs.org/netsuite-sync/-/netsuite-sync-1.2.2.tgz",
-  "_shasum": "c32a77f490f4976d5cedc720e40c836c88eecd8b",
-  "_spec": "netsuite-sync",
-  "_where": "U:\\",
-  "author": "",
-  "bin": {
-    "ns": "ns.js"
-  },
-  "bugs": {
-    "url": "https://github.com/ExploreConsulting/netsuite-sync/issues"
-  },
-  "bundleDependencies": false,
+  "description": "push files to the file cabinet",
+  "name": "netsuite-sync",
+  "version": "1.2.2",
   "dependencies": {
     "chalk": "^1.1.1",
     "commander": "^2.8.1",
@@ -40,29 +12,28 @@
     "request": "2.75.0",
     "xml2js": "0.4.4"
   },
-  "deprecated": false,
-  "description": "push files to the file cabinet",
-  "devDependencies": {
-    "mocha": "2.0.1",
-    "replace": "0.3.0",
-    "should": "4.4.1"
-  },
+  "main": "ns.js",
   "directories": {
     "test": "test"
   },
-  "engines": {
-    "node": ">=4.0.0"
-  },
-  "homepage": "https://github.com/ExploreConsulting/netsuite-sync#readme",
-  "license": "ISC",
-  "main": "ns.js",
-  "name": "netsuite-sync",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ExploreConsulting/netsuite-sync.git"
+  "devDependencies": {
+    "mocha": "2.0.1",
+    "should": "4.4.1",
+    "replace": "0.3.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.2.4"
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "ns": "ns.js"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ExploreConsulting/netsuite-sync.git"
+  }
 }

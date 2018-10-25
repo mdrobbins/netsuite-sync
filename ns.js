@@ -32,7 +32,7 @@ program
     .option('-g, --gen-config', "Contacts NetSuite for config information and generates a config file so you don't " +
         "have to populate the config file entirely by hand")
     .on('--help', function () {
-        console.log('Examples:');
+        console.log('Testing Examples:');
         console.log();
         console.log('Generate (unencrypted) config file interactively:')
         console.log(chalk.inverse(' ns -g '))
@@ -60,7 +60,6 @@ if (program.encryptConfig) {
 }
 
 if (program.upload) {
-    //console.log(JSON.stringify(program))
     fileCabinet.postFile(program.upload, program.desc, program.folder, function (err, resp) {
 
         if(err=='environment'){
@@ -79,7 +78,7 @@ if (program.upload) {
                 console.error(chalk.red(failMsg));
             }
         }  
-    },program.args[0], program.args[1]);
+    },program.args[0], program.args[1], program.args[2]);
 }
 
 if (program.createConfig) {
