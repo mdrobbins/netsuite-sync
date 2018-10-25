@@ -60,22 +60,26 @@ if (program.encryptConfig) {
 }
 
 if (program.upload) {
+    //console.log(JSON.stringify(program))
     fileCabinet.postFile(program.upload, program.desc, program.folder, function (err, resp) {
 
-        if (err) throw err;
-
-        debug('response from NS cabinet add: %s', JSON.stringify(resp))
-
-        var wr = resp.Envelope.Body.addResponse.writeResponse;
-        if (wr.status.isSuccess == "true") {
-            var successMsg = "File uploaded successfully as internalid " + wr.baseRef.internalId;
-            console.log(chalk.green(successMsg));
-        }
-        else {
-            var failMsg = "Problem uploading file" + JSON.stringify(wr);
-            console.error(chalk.red(failMsg));
-        }
-    });
+        if(err=='environment'){
+            console.log(chalk.yellow("Please specifiy a folder after the filename"))
+        }else if (err){
+            throw err;
+        }else{
+            debug('response from NS cabinet add: %s', JSON.stringify(resp))
+            var wr = resp.Envelope.Body.addResponse.writeResponse;
+            if (wr.status.isSuccess == "true") {
+                var successMsg = "File uploaded successfully as internalid " + wr.baseRef.internalId;
+                console.log(chalk.green(successMsg));
+            }
+            else {
+                var failMsg = "Problem uploading file" + JSON.stringify(wr);
+                console.error(chalk.red(failMsg));
+            }
+        }  
+    },program.args[0], program.args[1]);
 }
 
 if (program.createConfig) {

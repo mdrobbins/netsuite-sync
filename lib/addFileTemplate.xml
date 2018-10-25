@@ -5,5 +5,7 @@
         <s0:content><%=content%></s0:content>
         <s0:folder internalId="<%=folderid%>" type="folder"/>
         <s0:description><%=description%></s0:description>
+        <s0:bundleable><%=bundle%></s0:bundleable>
+        <s0:isOnline><%=online%></s0:isOnline>
     </platformMsgs:record>
 </platformMsgs:add>
